@@ -24,8 +24,6 @@ guess.addEventListener("keyup", (e) => {
 });
 
 function guessNumber() {
-  console.log("x:", x);
-  console.log("tahmin:", guess.value);
   diff = Math.abs(x - guess.value);
   if (diff === 0) {
     popup.style.display = "flex";
@@ -41,7 +39,6 @@ function guessNumber() {
   `;
   guess.value = "";
   y++;
-  console.log(y);
 }
 
 off.addEventListener("click", () => {
