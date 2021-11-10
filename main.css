@@ -31,6 +31,7 @@
   background-color: #fff;
   padding: 3rem;
   border-radius: 10px;
+  max-width: 500px;
 }
 
 .container .content input::-webkit-outer-spin-button,
@@ -54,5 +55,60 @@
 
 .container .content .text {
   margin-top: 1rem;
+}
+
+.container .content .title {
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+.container .content .numbers {
+  margin-bottom: 2rem;
+}
+
+.popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.popup .content {
+  padding: 5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.popup .content .off {
+  margin-top: 2rem;
+  padding: 10px 20px;
+  background-color: aqua;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
