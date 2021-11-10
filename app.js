@@ -5,10 +5,6 @@ const popupText = document.querySelector(".popup-text");
 const popup = document.querySelector(".popup");
 const off = document.querySelector(".off");
 
-off.addEventListener("click", () => {
-  popup.style.display = "none";
-});
-
 let x = Math.floor(Math.random() * 100) + 1;
 let y = 0;
 
@@ -32,9 +28,8 @@ function guessNumber() {
   console.log("tahmin:", guess.value);
   diff = Math.abs(x - guess.value);
   if (diff === 0) {
-    text.textContent = "Tebrikler Doğru Bildiniz";
     popup.style.display = "flex";
-    popupText.textContent = `Tebrikler ${y} denemede bildiniz`;
+    popupText.textContent = `Tebrikler, ${y} denemede bildiniz`;
   } else if (diff < 5) text.textContent = "Alev alev";
   else if (diff <= 10) text.textContent = "Sıcak";
   else if (diff <= 20) text.textContent = "Ilık";
@@ -48,3 +43,11 @@ function guessNumber() {
   y++;
   console.log(y);
 }
+
+off.addEventListener("click", () => {
+  popup.style.display = "none";
+  numbers.innerHTML = "";
+  let x = Math.floor(Math.random() * 100) + 1;
+  y = "0";
+  text.textContent = "0 ile 100 arasında sayı tahmin ediniz";
+});
